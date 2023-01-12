@@ -3,13 +3,8 @@ This is an express server that allows you to interact with the IDRAC of your Del
 
 ## Installation
 1. Clone the repository
-2. Run `npm install`
-3. Set the environment variables `idrac_hostname`, `idrac_username`, `idrac_password` and `debug`.
-    - `idrac_hostname`: The hostname or IP address of the IDRAC.
-    - `idrac_username`: The username to login to the IDRAC.
-    - `idrac_password`: The password to login to the IDRAC.
-    - `debug`: Whether to show error messages to the client or not.
-4. Run `npm start`
+2. Build this docker image using a command like (docker build -t idrac .)
+3. Run the container making sure to set these envs. `idrac_hostname`, `idrac_username`, `idrac_password` and optionally `debug`
 
 ## Available Routes
 - `GET /status`: Returns the online status of the IDRAC.
