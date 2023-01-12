@@ -10,7 +10,7 @@ FROM alpine
 # Install requirements for the application to run
 RUN apk add --update nodejs
 RUN apk add ipmitool
-RUN apk add nano
+#RUN apk add nano
 WORKDIR /app
 # Extract the contents of builder
 COPY --from=Builder /app /app

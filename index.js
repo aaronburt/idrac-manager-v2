@@ -1,7 +1,7 @@
 import IDRAC from "./idrac.js";
 import express from 'express';
 const { idrac_hostname, idrac_username, idrac_password, debug } = process.env;
-const idracConnection = new IDRAC(idrac_hostname || '192.168.1.75', idrac_hostname || 'root', idrac_password || 'setuser');
+const idracConnection = new IDRAC(idrac_hostname || '0.0.0.0', idrac_username || 'root', idrac_password || 'calvin');
 const router = express();
 router.get('/status', async (req, res) => {
     try {
