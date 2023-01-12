@@ -16,3 +16,11 @@ jobs:
     - uses: docker/build-push-action@v3
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag idrac_manager_v2:$(date +%s)
+    
+    - name: Login to GitHub Container Registry
+      uses: docker/login-action@v2
+      with:
+        registry: ghcr.io
+        username: ${{ github.actor }}
+        password: ${{ secrets.PERSONAL_ACCESS_TOKEN_FOR_IDRAC_MANAGER_V2 }}
+    
