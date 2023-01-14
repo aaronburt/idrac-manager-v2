@@ -4,7 +4,7 @@ This is an express server that allows you to interact with the IDRAC of your Del
 
 ## Run from Docker (Recommended)
 ```
-docker run -p 8080:8080 -e idrac_hostname=<hostname or ip> -e idrac_username=<username> -e idrac_password=<password> mrburtuk/idrac_manager_v2 -d
+docker run -p 8080:8080 -e idrac_hostname=<hostname or ip> -e idrac_username=<username> -e idrac_password=<password> -d mrburtuk/idrac_manager_v2
 ```
 
 ```
